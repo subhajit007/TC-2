@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app = "tictacapp">
+<head>
+	<title>Welcome to Subhajit's TicTacToe</title>
+
+	<link rel="stylesheet" type="text/css" href="test.css">
+      <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="firebase.js"></script>
+<script type="text/javascript" src="angularfire.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="TicTacToeController.js"></script>
+
+
+
+
+</head>
+<body ng-controller =" TicTacToeController as tc">
+{{tc.test}}
+
+
+<!-- //bk is the background video id which will run in auto loop -->
+<div id = "bk">
+		<video autoplay loop >
+            <source src="usd_slow.mp4" type="video/mp4">
+		</video>
+</div>
+
+<!-- Game screen title  -->
+
+<h1> Subhajit's TicTacToe</h1>
+
+
+  <!-- <audio control autoplay>
+  <source src="bk.mp3" type="audio/mpeg">
+  </audio> -->
+
+
+ <!-- Creating main box and other 9 boxes. 3 in each row with the onclick function it will print either X or 0-->
+<div>
+
+<div id="box">
+
+      	<div class="btn" id="btn1" ng-click="tc.clickBtn(0)" ng-bind="tc.playerArray.board[0]"> </div>
+      	<div class="btn" id="btn2" ng-click="tc.clickBtn(1)" ng-bind="tc.playerArray.board[1]"> </div>
+      	<div class="btn" id="btn3" ng-click="tc.clickBtn(2)" ng-bind="tc.playerArray.board[2]"> </div>
+
+            <div class="btn" id="btn4" ng-click="tc.clickBtn(3)" ng-bind="tc.playerArray.board[3]"> </div>
+            <div class="btn" id="btn5" ng-click="tc.clickBtn(4)" ng-bind="tc.playerArray.board[4]"> </div>
+            <div class="btn" id="btn6" ng-click="tc.clickBtn(5)" ng-bind="tc.playerArray.board[5]"> </div>
+
+            <div class="btn" id="btn7" ng-click="tc.clickBtn(6)" ng-bind="tc.playerArray.board[6]"> </div>
+            <div class="btn" id="btn8" ng-click="tc.clickBtn(7)" ng-bind="tc.playerArray.board[7]"> </div>
+            <div class="btn" id="btn9" ng-click="tc.clickBtn(8)" ng-bind="tc.playerArray.board[8]"> </div>
+
+
+
+</div>
+<div class="btn" ng-click="tc.clearBoard()">
+</div>
+</div>
+
+
+<!-- javascript alert sound is preloading here -->
+
+<audio id="xyz" src="winalert.mp3" preload="auto"></audio>
+
+
+
+
+
+
+
+
+</body>
+</html>
